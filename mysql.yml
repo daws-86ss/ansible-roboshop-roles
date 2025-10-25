@@ -1,4 +1,4 @@
-- name: create mysql server
+- name: create mysql security_group
   hosts: mysql
   become: yes
   roles:
