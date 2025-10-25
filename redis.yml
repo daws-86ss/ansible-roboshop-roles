@@ -1,4 +1,4 @@
-- name: create mongodb security_group
+- name: create redis server
   hosts: redis
   become: yes
   roles:
