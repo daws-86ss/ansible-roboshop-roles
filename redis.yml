@@ -1,5 +1,5 @@
 - name: create mongodb security_group
-  hosts: mongodb
+  hosts: redis
   become: yes
   roles:
   - redis
