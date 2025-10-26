@@ -8,11 +8,6 @@
     name: common
     tasks_from: nodejs.yml
 
-
-- name: copy catalogue file
-  ansible.builtin.copy:
-    src: catalogue.service
-    dest: /etc/systemd/system/catalogue.service
     
 - name: copy mongo repo
   ansible.builtin.copy:
@@ -36,9 +31,3 @@
   ansible.builtin.shell: mongosh --host {{  MONGODB_HOST  }} </app/db/master-data.js
   when: catalogue_output.stdout |  int < 0
 
-- name: start and enabled catalogue service
-  ansible.builtin.systemd_service:
-    name: catalogue
-    state: started
-    enabled: yes
-    daemon_reload: true
