@@ -1,5 +1,0 @@
-- name: create redis server
-  hosts: redis
-  become: yes
-  roles:
-  - redis
