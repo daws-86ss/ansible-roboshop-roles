@@ -4,7 +4,7 @@
     tasks_from: app-setup.yml
 
 
-- name: app setup
+- name: installing nodejs
   ansible.builtin.import_role:
     name: common
     tasks_from: nodejs.yml
