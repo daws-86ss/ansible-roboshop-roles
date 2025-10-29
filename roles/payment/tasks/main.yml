@@ -8,6 +8,26 @@
     name: common
     tasks_from: python.yml
 
+- name: installing python mysql libraries
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    executable: pip3.9
+  loop:
+  - PyMySQL
+  - cryptography
+
+- name : load shipping data into my sql
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    login_host: "{{ MYSQL_HOST }}"
+    login_user: "{{MYSQL_ROOT_USER }}" 
+    login_password: "{{MYSQL_ROOT_PASSWORD }}"  
+    target: "{{ item }}"
+  loop:
+  - /app/db/schema.sql
+  - /app/db/app-user.sql 
+  - /app/db/master-data.sql
 
 - name: app setup
   ansible.builtin.import_role:
