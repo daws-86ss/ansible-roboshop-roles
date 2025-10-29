@@ -5,3 +5,5 @@ CART_HOST: cart.awspractice.store
 MYSQL_HOST: mysql.awspractice.store
 USER_HOST: user.awspractice.store
 RABBITMQ_HOST: mysql.awspractice.store
+SHIPPING_HOST: shipping.awspractice.store
+PAYMENT_HOST: payment.awspractice.store
