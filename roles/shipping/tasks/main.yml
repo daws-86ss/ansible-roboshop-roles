@@ -8,13 +8,21 @@
     name: common
     tasks_from: java.yml
 
+- name: installing python mysql libraries
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    executable: pip3.9
+  loop:
+  - PyMySQL
+  - cryptography
+  
 - name : load shipping data into my sql
   community.mysql.mysql_db:
     state: import
     name: all
-    login_host: mysql.awspractice.store
-    login_user: root 
-    login_password: RoboShop@1 
+    login_host: "{{ MYSQL_HOST }}"
+    login_user: "{{MYSQL_ROOT_USER}}" 
+    login_password: "{{MYSQL_ROOT_PASSWORD}}"  
     target: "{{ item }}"
   loop:
   - /app/db/schema.sql
