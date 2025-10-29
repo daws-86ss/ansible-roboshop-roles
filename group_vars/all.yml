@@ -1,0 +1,2 @@
+MONGODB_HOST: mongodb.awspractice.store
+REDIS_HOST: redis.awspractice.store
