@@ -6,7 +6,7 @@
 - name: app setup
   ansible.builtin.import_role:
     name: common
-    tasks_from: java.yml
+    tasks_from: python.yml
 
 - name: app setup
   ansible.builtin.import_role:
