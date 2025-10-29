@@ -3,3 +3,5 @@ REDIS_HOST: redis.awspractice.store
 CATALOGUE_HOST: catalogue.awspractice.store
 CART_HOST: cart.awspractice.store
 MYSQL_HOST: mysql.awspractice.store
+USER_HOST: user.awspractice.store
+RABBITMQ_HOST: mysql.awspractice.store
