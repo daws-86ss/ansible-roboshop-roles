@@ -1,2 +1,3 @@
 MONGODB_HOST: mongodb.awspractice.store
 REDIS_HOST: redis.awspractice.store
+CATALOGUE_HOST: catalogue.awspractice.store
